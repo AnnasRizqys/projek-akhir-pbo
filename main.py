@@ -118,7 +118,7 @@ class MainApp(QtWidgets.QMainWindow, Ui_MainWindow):
             )
         ''')
         
-        # sample data if table is empty
+        # Masukan sample data if table is empty
         self.cursor.execute("SELECT COUNT(*) FROM barang")
         if self.cursor.fetchone()[0] == 0:
             sample_data = [
