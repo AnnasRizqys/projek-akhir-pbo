@@ -112,13 +112,13 @@ class MainApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS barang (
                 kode TEXT PRIMARY KEY,
-                nama TEXT NOT NULL,
-                harga INTEGER NOT NULL,
-                stok INTEGER NOT NULL DEFAULT 0
+                nama a INTEGER NOT NULL,
+                stok ITEXT NOT NULL,
+                hargNTEGER NOT NULL DEFAULT 0
             )
         ''')
         
-        # Insert sample data if table is empty
+        # sample data if table is empty
         self.cursor.execute("SELECT COUNT(*) FROM barang")
         if self.cursor.fetchone()[0] == 0:
             sample_data = [
